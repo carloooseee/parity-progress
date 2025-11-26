@@ -38,7 +38,7 @@ body {
   background-attachment: fixed;
 
   width: 100%;
-  min-height: 100vh;     /* makes background fill the whole section */
+  min-height: 60vh;     /* makes background fill the whole section */
   padding-top: 80px;     /* prevents navbar overlap */
   padding-bottom: 40px;
 }
@@ -68,7 +68,7 @@ body {
 /* CAROUSEL */
 
 .carousel img {
-  height: 680px;
+  height: 490px;
   object-fit: cover;
   border-radius: 5px;
 }
