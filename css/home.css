@@ -1,0 +1,96 @@
+/* HOME PAGE STYLING — Modern Soft UI (White + Navy) */
+
+body {
+  color: #031a30;
+  font-family: 'Inter', sans-serif;
+}
+
+/* NAVBAR */
+.bg-navy {
+  background-color: #ffffff !important;
+  color: #031a30;
+}
+.navbar-brand{
+  color: #000000;
+  padding: 10px;
+}
+.navbar-brand:hover{
+  color: #0026ff;
+}
+.nav-link {
+  color: #000000 !important;
+  padding: 10px;
+}
+.hero-section .highlight {
+  color: white;
+  background: rgba(3, 26, 48, 0.75); /* navy with transparency */
+  padding: 20px 30px;
+  border-radius: 16px;
+  display: inline-block;
+}
+
+
+.bro {
+  background-image: url("../assets/home.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  min-height: 100vh;     /* makes background fill the whole section */
+  padding-top: 80px;     /* prevents navbar overlap */
+  padding-bottom: 40px;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* HERO SECTION */
+
+.text-navy {
+  color: #031a30 !important;
+}
+
+.btn-navy {
+  background: #031a30;
+  color: white;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.btn-navy:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+/* CAROUSEL */
+
+.carousel img {
+  height: 680px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* INFO SECTION */
+.info-section {
+  background-color: #031a30 !important;
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.info-card {
+  background: white;
+  border-radius: 16px;
+  transition: 0.25s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+footer {
+  background-color: #031a30 !important;
+  color: #ffffff;
+}

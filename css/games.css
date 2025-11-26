@@ -1,0 +1,99 @@
+/* GAMES PAGE — Modern Soft UI (White + Navy) */
+
+body {
+  background-image: url("../assets/home.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* NAVBAR */
+.bg-navy {
+  background-color: #031a30 !important;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* TITLES */
+.text-navy {
+  color: #031a30 !important;
+}
+
+/* GAME CARDS */
+.game-card {
+  background: #f7f9fc;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* BUTTONS */
+.btn-navy {
+  background: #031a30;
+  color: white;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+}
+
+.btn-navy:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+.btn-outline-navy {
+  background: transparent;
+  border: 2px solid #031a30;
+  color: #031a30;
+  font-weight: 700;
+  border-radius: 12px;
+}
+
+.btn-outline-navy:hover {
+  background: #031a30;
+  color: white;
+}
+
+/* OPTIONS */
+.option {
+  padding: 12px;
+  border-radius: 12px;
+  background: #e9eef5;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.option:hover {
+  background: #dfe7f2;
+}
+
+.correct {
+  background: rgba(0, 200, 80, 0.25) !important;
+  border: 1px solid rgba(0, 150, 60, 0.4) !important;
+}
+
+.wrong {
+  background: rgba(255, 60, 60, 0.25) !important;
+  border: 1px solid rgba(200, 40, 40, 0.4) !important;
+}
+
+footer {
+  background: #ffffff;
+  color: #666;
+}
