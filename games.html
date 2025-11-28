@@ -1,70 +1,113 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Parity Progress — Games</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/games.css" />
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-navy shadow-sm fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="index.html">Parity Progress</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="games.html">Games</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Parity Progress</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="games.html">Games</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container pt-5 mt-4 pb-5">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold mb-3">Test Your Knowledge</h2>
+      <p class="text-muted">Play through these interactive challenges to learn more about gender parity.</p>
+
+      <div class="score-board">
+        <span>🏆 Score: <span id="total-score">0</span></span>
+      </div>
+    </div>
+
+    <div class="game-container">
+
+      <!-- Myth or Fact -->
+      <div class="game-card" id="game-mf">
+        <div class="game-header">
+          <h5>Myth or Fact?</h5>
+        </div>
+        <div class="game-body">
+          <p class="text-muted mb-4">Tap the correct answer. Learn real evidence.</p>
+          <div id="mf-question" class="question-text"></div>
+          <div id="mf-options" class="d-grid gap-2"></div>
+          <div id="mf-explain" class="feedback-text"></div>
+          <button id="mf-next" class="next-btn">Next Question</button>
+        </div>
+      </div>
+
+      <!-- Bias Detect -->
+      <div class="game-card" id="game-bd">
+        <div class="game-header">
+          <h5>Bias Detect</h5>
+        </div>
+        <div class="game-body">
+          <p class="text-muted mb-4">Is this statement biased?</p>
+          <div id="bd-question" class="question-text"></div>
+          <div class="d-grid gap-2">
+            <button id="bd-yes" class="option-btn">Bias</button>
+            <button id="bd-no" class="option-btn">Not Bias</button>
+          </div>
+          <div id="bd-explain" class="feedback-text"></div>
+          <button id="bd-next" class="next-btn">Next Question</button>
+        </div>
+      </div>
+
+      <!-- Global Match -->
+      <div class="game-card" id="game-gm">
+        <div class="game-header">
+          <h5>Global Match</h5>
+        </div>
+        <div class="game-body">
+          <p class="text-muted mb-4">Match the country with the correct policy.</p>
+          <div id="gm-question" class="question-text"></div>
+          <div id="gm-options" class="d-grid gap-2"></div>
+          <div id="gm-explain" class="feedback-text"></div>
+          <button id="gm-next" class="next-btn">Next Question</button>
+        </div>
+      </div>
+
+      <!-- Results Section (Hidden by default) -->
+      <div id="results-section" class="results-section">
+        <h2 class="mb-4">Great Job! 🎉</h2>
+        <p class="text-muted mb-4">You've completed all the challenges.</p>
+        <div class="results-score" id="final-score">0</div>
+        <p class="mb-4">points</p>
+        <button onclick="location.reload()" class="btn btn-primary-gradient">Play Again</button>
+      </div>
+
     </div>
   </div>
-</nav>
 
-<div class="container pt-5 mt-5 pb-5">
-  <h2 class="text-center fw-bold text-navy mb-4">Interactive Games</h2>
+  <footer class="text-center small py-4 text-muted">Parity Progress © 2025</footer>
 
-  <!-- Myth or Fact -->
-  <div class="card game-card p-4 mb-4">
-    <h5 class="fw-bold text-navy">Myth or Fact</h5>
-    <p class="text-muted">Tap the correct answer. Learn real evidence.</p>
-    <div id="mf-question" class="fw-bold mb-3"></div>
-    <div id="mf-options" class="d-grid gap-2"></div>
-    <button id="mf-next" class="btn btn-navy mt-3">Next</button>
-    <div id="mf-explain" class="mt-3 text-info"></div>
-  </div>
-
-  <!-- Bias Detect -->
-  <div class="card game-card p-4 mb-4">
-    <h5 class="fw-bold text-navy">Bias Detect</h5>
-    <p class="text-muted">Is this statement biased?</p>
-    <div id="bd-question" class="fw-bold mb-3"></div>
-    <div class="d-flex gap-2">
-      <button id="bd-yes" class="btn btn-navy flex-fill">Bias</button>
-      <button id="bd-no" class="btn btn-outline-navy flex-fill">Not Bias</button>
-    </div>
-    <div id="bd-explain" class="mt-3 text-info"></div>
-  </div>
-
-  <!-- Global Match -->
-  <div class="card game-card p-4 mb-4">
-    <h5 class="fw-bold text-navy">Global Match</h5>
-    <p class="text-muted">Match the country with the correct policy.</p>
-    <div id="gm-question" class="fw-bold mb-3"></div>
-    <div id="gm-options" class="d-grid gap-2"></div>
-    <button id="gm-next" class="btn btn-navy mt-3">Next</button>
-    <div id="gm-explain" class="mt-3 text-info"></div>
-  </div>
-</div>
-
-<footer class="py-4 text-center text-muted small">Parity Progress © 2025</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/games.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/games.js"></script>
 </body>
+
 </html>

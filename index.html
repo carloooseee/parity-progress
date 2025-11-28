@@ -1,93 +1,160 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Parity Progress — Home</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/home.css" />
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-navy shadow-sm fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand hero-highlight" href="#"><img src="assets/logo.jpg" style="width: 70px;"></a>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        Parity Progress
+      </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#info">Information</a></li>
-        <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<div class="bro">
-
-  <div class="container nigganaenae py-5">
-    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner rounded-4">
-        <div class="carousel-item active">
-          <img src="assets/carousel-1.png" class="d-block w-100" alt="slide1" />
-        </div>
-        <div class="carousel-item">
-          <img src="assets/carousel-2.png" class="d-block w-100" alt="slide2" />
-        </div>
-        <div class="carousel-item">
-          <img src="assets/carousel-3.png" class="d-block w-100" alt="slide3" />
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-  </div>
-</div>
 
-
-
-<section id="info" class="info-section py-5">
-  <div class="container text-center">
-    <h2 class="fw-bold text-navy mb-4">Why Gender Parity Matters</h2>
-
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="info-card p-3 rounded-4 shadow-sm h-100">
-          <img src="assets/home-1.png" class="img-fluid rounded mb-3" />
-          <h5 class="fw-bold text-navy">Economic Gains</h5>
-          <p class="text-muted">Countries with gender-equal leadership see stronger growth.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="info-card p-3 rounded-4 shadow-sm h-100">
-          <img src="assets/home-2.png" class="img-fluid rounded mb-3" />
-          <h5 class="fw-bold text-navy">Policy Wins</h5>
-          <p class="text-muted">Quotas, childcare, and leave policies drive change fast.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="info-card p-3 rounded-4 shadow-sm h-100">
-          <img src="assets/home-3.png" class="img-fluid rounded mb-3" />
-          <h5 class="fw-bold text-navy">Global Proof</h5>
-          <p class="text-muted">Rwanda, Iceland, Mexico, Norway show proven success cases.</p>
-        </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#info">Why It Matters</a></li>
+          <li class="nav-item"><a class="nav-link" href="#facts">Did You Know?</a></li>
+          <li class="nav-item">
+            <a class="btn btn-primary-gradient" href="games.html">Play Games</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<footer class="py-4 text-center small">Parity Progress © 2025</footer>
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h1 class="hero-title">Bridging the Gap for a Better Future</h1>
+          <p class="hero-subtitle">Discover why gender parity isn't just a goal—it's the key to global prosperity,
+            innovation, and fairness.</p>
+          <div class="d-flex gap-3">
+            <a href="games.html" class="btn btn-primary-gradient">Start Learning</a>
+            <a href="#info" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold" style="border-width: 2px;">Learn
+              More</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/carousel-1.png" class="d-block w-100" alt="Diverse team working together" />
+              </div>
+              <div class="carousel-item">
+                <img src="assets/carousel-2.png" class="d-block w-100" alt="Women leadership" />
+              </div>
+              <div class="carousel-item">
+                <img src="assets/carousel-3.png" class="d-block w-100" alt="Global equality" />
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/home.js"></script>
+  <section id="info" class="info-section">
+    <div class="container">
+      <h2 class="section-title">Why Gender Parity Matters</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="info-card">
+            <img src="assets/home-1.png" alt="Economic Growth" />
+            <h5>Economic Gains</h5>
+            <p class="text-muted">Closing the gender gap could add $28 trillion to the global GDP. Diverse leadership
+              drives stronger financial performance.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-card">
+            <img src="assets/home-2.png" alt="Policy Changes" />
+            <h5>Policy Wins</h5>
+            <p class="text-muted">Effective policies like paid parental leave and quotas accelerate progress.
+              Legislation is the backbone of equality.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-card">
+            <img src="assets/home-3.png" alt="Global Success" />
+            <h5>Global Proof</h5>
+            <p class="text-muted">Countries like Iceland and Rwanda lead the way, proving that cultural and political
+              shifts create lasting change.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="facts" class="did-you-know">
+    <div class="container">
+      <h2 class="section-title text-white mb-5">Did You Know?</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="fact-card text-center">
+            <div class="fact-icon">📉</div>
+            <h3 class="fw-bold">132 Years</h3>
+            <p class="mb-0">Time needed to close the global gender gap at current progress rates.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="fact-card text-center">
+            <div class="fact-icon">👩‍💻</div>
+            <h3 class="fw-bold">22%</h3>
+            <p class="mb-0">Percentage of AI professionals who are women globally.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="fact-card text-center">
+            <div class="fact-icon">💼</div>
+            <h3 class="fw-bold">30%</h3>
+            <p class="mb-0">Companies with 30% female execs outperform others by 48%.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="fact-card text-center">
+            <div class="fact-icon">🌍</div>
+            <h3 class="fw-bold">68%</h3>
+            <p class="mb-0">Of the gender gap has been closed globally, but progress is stalling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center small">
+    <div class="container">
+      <p class="mb-0">Parity Progress © 2025 — Built for a better tomorrow.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/home.js"></script>
 </body>
+
 </html>

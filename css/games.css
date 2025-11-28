@@ -1,99 +1,164 @@
-/* GAMES PAGE — Modern Soft UI (White + Navy) */
+/* GAMES PAGE STYLING */
+@import url('home.css');
 
 body {
-  background-image: url("../assets/home.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  padding-top: 80px;
 }
 
-/* NAVBAR */
-.bg-navy {
-  background-color: #031a30 !important;
+.game-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.nav-link {
-  color: #ffffff !important;
-  font-weight: 600;
+.score-board {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.25rem;
 }
 
-.nav-link:hover {
-  color: #0d6efd !important;
-}
-
-/* TITLES */
-.text-navy {
-  color: #031a30 !important;
-}
-
-/* GAME CARDS */
 .game-card {
-  background: #f7f9fc;
-  border-radius: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
-  transition: 0.25s ease;
-}
-
-.game-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
-}
-
-/* BUTTONS */
-.btn-navy {
-  background: #031a30;
-  color: white;
-  font-weight: 700;
-  border-radius: 12px;
+  background: white;
+  border-radius: 24px;
   border: none;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
 }
 
-.btn-navy:hover {
-  background: #0d6efd;
+.game-header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 1.5rem;
   color: white;
 }
 
-.btn-outline-navy {
-  background: transparent;
-  border: 2px solid #031a30;
-  color: #031a30;
+.game-header h5 {
+  margin: 0;
   font-weight: 700;
-  border-radius: 12px;
+  font-size: 1.25rem;
 }
 
-.btn-outline-navy:hover {
-  background: #031a30;
+.game-body {
+  padding: 2rem;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+}
+
+.option-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  color: var(--dark);
+  font-weight: 500;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+  border-color: var(--primary);
+  background: #f8fafc;
+  transform: translateX(5px);
+}
+
+.option-btn.correct {
+  background: #dcfce7;
+  border-color: #22c55e;
+  color: #15803d;
+}
+
+.option-btn.incorrect {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+.feedback-text {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.feedback-text.show {
+  display: block;
+}
+
+.feedback-correct {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.feedback-incorrect {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.next-btn {
+  background: var(--dark);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-top: 1rem;
+  display: none; /* Hidden by default until answered */
+}
+
+.next-btn:hover {
+  background: black;
   color: white;
 }
 
-/* OPTIONS */
-.option {
-  padding: 12px;
-  border-radius: 12px;
-  background: #e9eef5;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  transition: 0.25s;
+/* Results Modal/Section */
+.results-section {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  display: none;
 }
 
-.option:hover {
-  background: #dfe7f2;
+.results-score {
+  font-size: 4rem;
+  font-weight: 800;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
 }
 
-.correct {
-  background: rgba(0, 200, 80, 0.25) !important;
-  border: 1px solid rgba(0, 150, 60, 0.4) !important;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.wrong {
-  background: rgba(255, 60, 60, 0.25) !important;
-  border: 1px solid rgba(200, 40, 40, 0.4) !important;
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
 }
 
-footer {
-  background: #ffffff;
-  color: #666;
+.shake {
+  animation: shake 0.4s ease-in-out;
 }
